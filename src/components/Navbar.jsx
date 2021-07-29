@@ -10,7 +10,7 @@ function Navbar() {
             <Link to="/graphiques" className="link">GRAPHIQUES</Link>
             <Link to="/centres" className="link">CENTRES DE VACCINATION</Link>
             <Link to="/quizz" className="link">QUIZZ</Link>
-            <button>Darkmod</button>
+            <button className="darkmodbutton">Darkmod</button>
         </div>
     )
 }
