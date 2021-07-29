@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Info from "./components/Info";
 import Graph from "./components/Graph";
 import Centers from "./components/Centers";
@@ -11,7 +10,7 @@ import "./Style/general.css";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      
       <Switch>
         <Route exact path="/" component={Info}/>
         <Route path="/graphiques" component={Graph}/>
