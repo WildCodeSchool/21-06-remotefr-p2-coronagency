@@ -1,5 +1,4 @@
 .navbar {
-    background-color: var(--second-color);
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -12,6 +11,7 @@
 
 .link {
     color: var(--main-color);
+    background-color: var(--second-color);
     padding: 2vh;
     border: var(--main-color) 2px solid;
     width: 100%;
@@ -20,10 +20,25 @@
     justify-content: center;
     text-decoration: none;
     transition: 400ms;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .link:hover {
     color: var(--second-color);
     background-color: var(--main-color);
     border: var(--second-color) 2px solid;
+}
+
+.darkmodbutton {
+    color: var(--main-color);
+    background-color: var(--second-color);
+    padding: 2vh;
+    border: var(--main-color) 2px solid;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
