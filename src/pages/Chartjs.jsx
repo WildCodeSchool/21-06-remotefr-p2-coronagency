@@ -3,6 +3,7 @@ import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
 import axios from "axios";
+import Navbar from "../components/Navbar";
  
 const Chartjs = () => {
     const [chartData, setChartData] = useState([]);
@@ -111,7 +112,7 @@ const Chartjs = () => {
  
     return (
         <div className="container">
- 
+            <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />
             </div>
