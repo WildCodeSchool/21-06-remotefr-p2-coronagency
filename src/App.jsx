@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Info from "./components/Info";
-import Graph from "./components/Graph";
+import Chartjs from "./pages/Chartjs";
 import Quiz from "./components/Quiz";
 import Darkmod from "./components/Darkmod";
 import {Switch, Route} from "react-router-dom";
@@ -14,7 +14,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Info}/>
-        <Route path="/graphiques" component={Graph}/>
+        <Route path="/graphiques" component={Chartjs}/>
         <Route path="/centres" component={Map}/>
         <Route path="/quizz" component={Quiz}/>
       </Switch>
