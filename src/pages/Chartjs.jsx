@@ -2,6 +2,7 @@ import React from "react";
 import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
+import Navbar from "../components/Navbar";
 import axios from "axios";
  
 const Chartjs = () => {
@@ -110,8 +111,8 @@ const Chartjs = () => {
     }, []);
  
     return (
-        <div className="container">
- 
+        <div className="containerChart">
+          <Navbar />
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 //import { Icon } from "leaflet";
 import * as centres from "../data/centres-vaccination.json";
+import Navbar from "../components/Navbar";
 import "./Map.css"
 
 
@@ -15,7 +16,8 @@ function Map() {
   const [centreVacc, setCentreVacc] = React.useState(null);
 
   return (
-  
+    <div>
+      <Navbar />
     <MapContainer center={[45.999054, 3.033400]} zoom={6}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -47,7 +49,7 @@ function Map() {
                   }}
                   >
               <div>
-                  <a href={centre.properties.c_rdv_site_web}>Site Web RDV</a>
+                  <a href={centre.properties.c_rdv_site_web} target="blank">Site Web RDV</a>
                 <h2>{centre.properties.c_rdv_lundi}</h2>
                <h2>{centre.properties.c_nom}</h2>
                 <p>{centre.properties.c_com_nom}</p>
@@ -57,6 +59,7 @@ function Map() {
       ))},
 
     </MapContainer>
+    </div>
   );
 }
 
