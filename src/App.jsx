@@ -5,6 +5,7 @@ import Quiz from "./pages/quiz/Quiz";
 import Darkmod from "./components/Darkmod";
 import {Switch, Route} from "react-router-dom";
 import './App.css';
+import Map from "./pages/Map"
 import "./Style/general.css";
 
 function App() {
@@ -14,10 +15,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Info}/>
         <Route path="/graphiques" component={Graph}/>
-        <Route path="/centres" component={Centers}/>
+        <Route path="/centres" component={Map}/>
         <Route path="/quizz" component={Quiz}/>
       </Switch>
-      
     </div>
   );
 }
