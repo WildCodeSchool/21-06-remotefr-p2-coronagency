@@ -1,5 +1,5 @@
 import Info from "./components/Info";
-import Graph from "./components/Graph";
+import Chartjs from "./pages/Chartjs";
 import Centers from "./components/Centers";
 import Quiz from "./pages/quiz/Quiz";
 import Darkmod from "./components/Darkmod";
@@ -14,7 +14,7 @@ function App() {
       
       <Switch>
         <Route exact path="/" component={Info}/>
-        <Route path="/graphiques" component={Graph}/>
+        <Route path="/graphiques" component={Chartjs}/>
         <Route path="/centres" component={Map}/>
         <Route path="/quizz" component={Quiz}/>
       </Switch>
