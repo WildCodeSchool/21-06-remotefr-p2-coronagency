@@ -78,7 +78,6 @@ const Chartjs = () => {
               backgroundColor: "#FF0000",
               borderColor: "#FF0000",
               fill: true,
-              //borderWidth: 4
             },
 
             {
@@ -87,7 +86,6 @@ const Chartjs = () => {
               backgroundColor: "#18DBA8",
               borderColor: "#18DBA8",
               fill: true,
-              //borderWidth: 4
             },
             
           ],
