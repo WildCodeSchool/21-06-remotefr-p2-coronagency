@@ -1,4 +1,5 @@
 import Info from "./components/Info";
+import Navbar from "./components/Navbar";
 import Chartjs from "./pages/Chartjs";
 import Centers from "./components/Centers";
 import Quiz from "./pages/quiz/Quiz";

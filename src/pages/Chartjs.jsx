@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
@@ -111,7 +112,7 @@ const Chartjs = () => {
  
     return (
         <div className="container">
- 
+          <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />
             </div>
