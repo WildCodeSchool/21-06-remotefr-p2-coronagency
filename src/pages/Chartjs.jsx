@@ -111,7 +111,7 @@ const Chartjs = () => {
     }, []);
  
     return (
-        <div className="container">
+        <div className="containerChart">
             <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />

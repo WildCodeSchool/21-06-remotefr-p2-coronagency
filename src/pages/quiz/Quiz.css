@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap%27');
 
+* {
+  margin: 0;
+}
+
 :root {
   --white-color: #e2dada;
   --red-color: #EB1D27;
