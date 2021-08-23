@@ -12,7 +12,7 @@ useEffect (() => {
     setTimeout(() => {
         refVirus.current.classList.remove("startingImg");
         setBtn(true)
-    }, 250);
+    }, 1000);
 
 }, [])
 
