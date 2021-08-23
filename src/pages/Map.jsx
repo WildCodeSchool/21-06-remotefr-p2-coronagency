@@ -4,13 +4,10 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 //import { Icon } from "leaflet";
 import * as centres from "../data/centres-vaccination.json";
 import "./Map.css"
-
-
     //  export const icon = new Icon({
     //  iconUrl: "./images.png",
     // // iconSize: [25, 25]
     // });
-
 function Map() {
 
   const [centreVacc, setCentreVacc] = React.useState(null);
@@ -18,12 +15,12 @@ function Map() {
   return (
   <div>
     <Navbar/>
-    <MapContainer center={[45.999054, 3.033400]} zoom={6}>
+     <MapContainer center={[45.999054, 3.033400]} zoom={6}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      />
-      {centres.features.map((centre, index) => (
+       />
+        {centres.features.map((centre, index) => (
         <Marker  
           key={index}
           position={[
@@ -47,18 +44,20 @@ function Map() {
                   }}
                   >
               <div>
-                  <a href={centre.properties.c_rdv_site_web}target= "blank">Site Web RDV</a>
+                  <a href={centre.properties.c_rdv_site_web} target='blank' className="rdv">Prendre un Rendez-Vous</a>
                 <h2>{centre.properties.c_rdv_lundi}</h2>
                <h2>{centre.properties.c_nom}</h2>
                 <p>{centre.properties.c_com_nom}</p>
                  </div>
-           </Popup>
-      </Marker>
-      ))},
+             </Popup>
+          </Marker>
+        ))},
     </MapContainer>
-    </div>
+  </div>
+    
   );
 }
+
 
 export default Map
 
