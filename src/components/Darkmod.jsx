@@ -1,0 +1,19 @@
+import React from 'react';
+import useDarkMode from 'use-dark-mode';
+import Toggle from './Toggle';
+
+
+const Darkmod = () => {
+  const darkMode = useDarkMode(false);
+
+  return (
+    <span>
+      Dark Mode is <code>{darkMode.value ? 'enabled' : 'disabled'}</code>. Turn
+      it{' '}
+      <button onClick={darkMode.toggle}>{darkMode.value ? 'off' : 'on'}</button>
+      .
+    </span>
+  );
+};
+
+export default Darkmod;

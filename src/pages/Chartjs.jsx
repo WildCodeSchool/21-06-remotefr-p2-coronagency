@@ -18,7 +18,7 @@ const Chartjs = () => {
          let gueris = [];
  
     axios
-      .get("https://a.nacapi.com/covidcustom")
+      .get("https://a.nacapi.com/covidcustom20210812")
       .then(res => {
         for (const dataObj of res.data.allLiveFranceData) {
           hospit.push(parseInt(dataObj.hospitalises));
@@ -54,7 +54,7 @@ const Chartjs = () => {
               },
               title: {
                 display: true,
-                text: "Hopitalisation par région"
+                text: "Hopitalisation par région",
               }
             },
             interaction: {
@@ -100,19 +100,23 @@ const Chartjs = () => {
               title: {
                 display: true,
                 text: "Guéris et Décès par région"
-              }
+              },
             }
           }
         });
       })
   };
+
+  
  
   useEffect(() => {
     chart();
     }, []);
+
  
     return (
-        <div className="container">
+        <div className="containerChart">
+           <h1>Voiçi Les graphiques sur les décés les hospitalisations et les géris</h1>
             <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />

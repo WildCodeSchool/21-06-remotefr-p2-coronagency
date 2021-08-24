@@ -1,14 +1,22 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-//import { Icon } from "leaflet";
+import { Icon } from "leaflet";
 import * as centres from "../data/centres-vaccination.json";
 import "./Map.css"
+import image from "../images/marker.svg"
     //  export const icon = new Icon({
-    //  iconUrl: "./images.png",
-    // // iconSize: [25, 25]
-    // });
+    //   iconUrl: "../images/markerdrap.png",
+    //  iconSize: [25, 25]
+    //  });
+
 function Map() {
+
+   const icon = new Icon({
+      iconUrl: "../images/marker4.svg",
+     iconSize: [76, 76],
+     iconAnchor: [25, 50],
+     });
 
   const [centreVacc, setCentreVacc] = React.useState(null);
 
@@ -22,6 +30,7 @@ function Map() {
        />
         {centres.features.map((centre, index) => (
         <Marker  
+          icon={icon}
           key={index}
           position={[
             centre.properties.c_latitude_coor1,
@@ -30,7 +39,7 @@ function Map() {
           onClick={() => {
             setCentreVacc(centre);
           }}
-               // icon={icon} 
+              //  icon={icon};
           >
            <Popup
               position={[
