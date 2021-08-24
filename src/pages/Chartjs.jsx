@@ -8,6 +8,7 @@ import axios from "axios";
 const Chartjs = () => {
     const [chartData, setChartData] = useState([]);
     const [decesGueris, setDecesGueris] = useState([]);
+    const [newChartData, setNewChartData] = useState([]);
  
     const chart = () => {
          let hospit = [];
@@ -15,9 +16,11 @@ const Chartjs = () => {
          let code =[];
          let deces = [];
          let gueris = [];
+         let newHospit = [];
+         let newRea = [];
  
     axios
-      .get("https://a.nacapi.com/covidcustom")
+      .get("https://a.nacapi.com/covidcustom20210812")
       .then(res => {
         for (const dataObj of res.data.allLiveFranceData) {
           hospit.push(parseInt(dataObj.hospitalises));
@@ -25,6 +28,8 @@ const Chartjs = () => {
           deces.push(dataObj.deces)
           rea.push(parseInt(dataObj.reanimation))
           gueris.push(parseInt(dataObj.gueris))
+          newHospit.push(parseInt(dataObj.nouvellesHospitalisations))
+          newRea.push(parseInt(dataObj.nouvellesReanimations))
         }
 
         setChartData({
@@ -47,15 +52,41 @@ const Chartjs = () => {
           ],
           options:{
             responsive: true,
-            plugins: {
-              legend: {
-                position: 'top',
-              },
-              title: {
-                display: true,
-                text: "Hopitalisation par région"
-              }
+            interaction: {
+              intersect:false,
             },
+            scales: {
+              x: {
+                stacked: true,
+              },
+              y: {
+                stacked:true,
+              },
+            },
+          }
+        });
+
+        setNewChartData({
+          labels: code,
+          datasets: [
+            {
+              type: "bar",
+              label: "Nbre en réanimation",
+              data: newRea,
+              backgroundColor: "#FF0000",
+              borderColor: "#FF0000",
+            },
+            {
+              type: "bar",
+              label: "Nbre hospitalisation",
+              data: newHospit,
+              backgroundColor: "#18DBA8",
+              borderColor: "#18DBA8"
+            },
+          ],
+          options:{
+            responsive: true,
+            indexAxis:'y',
             interaction: {
               intersect:false,
             },
@@ -92,15 +123,6 @@ const Chartjs = () => {
           ],
           options:{
             responsive: true,
-            plugins: {
-              legend: {
-                position: 'top',
-              },
-              title: {
-                display: true,
-                text: "Guéris et Décès par région"
-              }
-            }
           }
         });
       })
@@ -113,10 +135,19 @@ const Chartjs = () => {
     return (
         <div className="containerChart">
           <Navbar />
-            <div className="card">
+          <div>
+            <h1 className="title-chart">Graphiques repérentant différentes données et affichées par région</h1>
+          </div>
+          <div className="card">
+              <h2 className="title-card">Hospitalisations globales</h2>
             <Bar data ={chartData} options={chartData.options} />
             </div>
             <div className="card">
+              <h2 className="title-card">Nouvelles hospitalisations</h2>
+            <Bar data ={newChartData} options={newChartData.options} />
+            </div>
+            <div className="card">
+              <h2 className="title-card">Personnes guéris et décès</h2>
             <Line data ={decesGueris} options={decesGueris.options} />
             </div>
         </div>

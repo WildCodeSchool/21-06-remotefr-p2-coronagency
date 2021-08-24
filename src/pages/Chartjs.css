@@ -3,8 +3,20 @@
     flex-wrap: wrap;
 }
  
-.card{
+.card {
     width: 70%;
     margin-top: 5vh;
     margin-left: 20vw;
+    padding-bottom: 10vh;
+}
+
+.title-chart {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.title-card {
+    text-align: center;
+    padding-bottom: 2vh;
 }
