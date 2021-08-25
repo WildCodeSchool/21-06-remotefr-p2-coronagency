@@ -106,8 +106,6 @@ const Chartjs = () => {
         });
       })
   };
-
-  
  
   useEffect(() => {
     chart();
@@ -116,7 +114,6 @@ const Chartjs = () => {
  
     return (
         <div className="containerChart">
-           <h1>Voiçi Les graphiques sur les décés les hospitalisations et les géris</h1>
             <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />

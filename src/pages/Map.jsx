@@ -4,33 +4,31 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import * as centres from "../data/centres-vaccination.json";
 import "./Map.css"
-import image from "../images/marker.svg"
-    //  export const icon = new Icon({
-    //   iconUrl: "../images/markerdrap.png",
-    //  iconSize: [25, 25]
-    //  });
+import marker from "../images/markervert.png"
+import L from "leaflet"
+   
 
 function Map() {
 
-   const icon = new Icon({
-      iconUrl: "../images/marker4.svg",
-     iconSize: [76, 76],
-     iconAnchor: [25, 50],
-     });
+   let Icon = L.icon({
+    iconUrl: marker,
+    iconSize: [35, 35],
+});
 
   const [centreVacc, setCentreVacc] = React.useState(null);
 
   return (
   <div>
     <Navbar/>
-     <MapContainer center={[45.999054, 3.033400]} zoom={6}>
+    <h1 className="centrevacc">Carte des centres de vaccinations français</h1>
+     <MapContainer className="map-container" center={[45.999054, 3.033400]} zoom={5}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
        />
         {centres.features.map((centre, index) => (
         <Marker  
-          icon={icon}
+          icon={Icon}
           key={index}
           position={[
             centre.properties.c_latitude_coor1,
@@ -39,7 +37,6 @@ function Map() {
           onClick={() => {
             setCentreVacc(centre);
           }}
-              //  icon={icon};
           >
            <Popup
               position={[
@@ -66,7 +63,5 @@ function Map() {
     
   );
 }
-
-
 export default Map
 

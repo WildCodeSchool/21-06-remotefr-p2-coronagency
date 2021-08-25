@@ -11,7 +11,7 @@ const Darkmod = () => {
       <button className="sun" type="button" onClick={darkMode.disable}>
         🌞
       </button>
-      <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
+      {/* <Toggle checked={darkMode.value} onChange={darkMode.toggle} /> */}
       <button className="lune" type="button" onClick={darkMode.enable}>
         🌚
       </button>

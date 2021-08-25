@@ -12,8 +12,8 @@ function Navbar() {
             <Link to="/centres" className="link">CENTRES DE VACCINATION</Link>
             <Link to="/quizz" target="_blank" className="link">QUIZZ</Link>
             {/* <button className="darkmodbutton"><DarkModeToggle/></button> */}
-             <button className="darkmodbutton"><Darkmod/></button>
-
+             {/* <button className="darkmodbutton"><Darkmod/></button> */}
+             <Darkmod/>
         </div>
     )
 }
