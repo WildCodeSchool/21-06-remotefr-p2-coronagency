@@ -132,21 +132,21 @@ const Chartjs = () => {
     }, []);
  
     return (
-      <div className="background-chart">
-        <h1 className="title-chart-light">Graphiques repérentant différentes données et affichées par région</h1>
+      <div className="backgroundChart">
+        <h1 className="titleChartLight">Graphiques repérentant différentes données et affichées par région</h1>
         <div className="containerChart">
           <Navbar />
           
           <div className="card">
-              <h2 className="title-card">Hospitalisations globales</h2>
+              <h2 className="titleCard">Hospitalisations globales</h2>
             <Bar data ={chartData} options={chartData.options} />
             </div>
             <div className="card">
-              <h2 className="title-card">Nouvelles hospitalisations</h2>
+              <h2 className="titleCard">Nouvelles hospitalisations</h2>
             <Bar data ={newChartData} options={newChartData.options} />
             </div>
             <div className="card">
-              <h2 className="title-card">Personnes guéris et décès</h2>
+              <h2 className="titleCard">Personnes guéris et décès</h2>
             <Line data ={decesGueris} options={decesGueris.options} />
             </div>
         </div>

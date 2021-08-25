@@ -1,4 +1,4 @@
-.background-chart{
+.backgroundChart{
     background-color: #e2dada;
 }
 .containerChart {
@@ -18,17 +18,23 @@
     ;
 }
 
-.title-chart-light {
+.titleChartLight {
     text-align: center;
     color: #3b3131;
     padding-top: 3vh;
 }
-.title-chart-dark {
+.titleChartDark {
     text-align: center;
     color: #e2dada;
 }
 
-.title-card {
+.titleCard {
     text-align: center;
     padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 767px) {
+.card {
+    height: auto;
+}
 }
