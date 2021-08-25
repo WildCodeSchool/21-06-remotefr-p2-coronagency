@@ -6,6 +6,7 @@
     transform: translateY(-50%);
     font-family: var(--second-font);
     align-items: center;
+    padding-left: 1vw;
     
 }
 

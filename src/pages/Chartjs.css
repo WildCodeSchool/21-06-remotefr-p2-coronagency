@@ -1,3 +1,6 @@
+.background-chart{
+    background-color: #e2dada;
+}
 .containerChart {
     display: flex;
     flex-wrap: wrap;
@@ -7,16 +10,24 @@
     width: 70%;
     margin-top: 5vh;
     margin-left: 20vw;
-    padding-bottom: 10vh;
+    padding-bottom: 3vh;
+    border: 2px solid black;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    background-color: white;
+    ;
 }
 
-.title-chart {
-    display: flex;
+.title-chart-light {
     text-align: center;
-    align-items: center;
+    color: #3b3131;
+}
+.title-chart-dark {
+    text-align: center;
+    color: #e2dada;
 }
 
 .title-card {
     text-align: center;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
 }

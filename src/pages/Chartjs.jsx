@@ -39,15 +39,15 @@ const Chartjs = () => {
               type: "bar",
               label: "Nbre en réanimation",
               data: rea,
-              backgroundColor: "#FF0000",
-              borderColor: "#FF0000",
+              backgroundColor: "#EB1D27",
+              borderColor: "#EB1D27",
             },
             {
               type: "bar",
               label: "Nbre hospitalisation",
               data: hospit,
-              backgroundColor: "#18DBA8",
-              borderColor: "#18DBA8"
+              backgroundColor: "#13C697",
+              borderColor: "#13C697"
             },
           ],
           options:{
@@ -73,20 +73,19 @@ const Chartjs = () => {
               type: "bar",
               label: "Nbre en réanimation",
               data: newRea,
-              backgroundColor: "#FF0000",
-              borderColor: "#FF0000",
+              backgroundColor: "#EB1D27",
+              borderColor: "#EB1D27",
             },
             {
               type: "bar",
               label: "Nbre hospitalisation",
               data: newHospit,
-              backgroundColor: "#18DBA8",
-              borderColor: "#18DBA8"
+              backgroundColor: "#13C697",
+              borderColor: "#13C697"
             },
           ],
           options:{
             responsive: true,
-            indexAxis:'y',
             interaction: {
               intersect:false,
             },
@@ -107,16 +106,16 @@ const Chartjs = () => {
             {
               label: "Nbre de décès",
               data: deces,
-              backgroundColor: "#FF0000",
-              borderColor: "#FF0000",
+              backgroundColor: "#EB1D27",
+              borderColor: "#EB1D27",
               fill: true,
             },
 
             {
               label: "Nbre de guéris",
               data: gueris,
-              backgroundColor: "#18DBA8",
-              borderColor: "#18DBA8",
+              backgroundColor: "#13C697",
+              borderColor: "#13C697",
               fill: true,
             },
             
@@ -133,11 +132,11 @@ const Chartjs = () => {
     }, []);
  
     return (
+      <div className="background-chart">
+        <h1 className="title-chart-light">Graphiques repérentant différentes données et affichées par région</h1>
         <div className="containerChart">
           <Navbar />
-          <div>
-            <h1 className="title-chart">Graphiques repérentant différentes données et affichées par région</h1>
-          </div>
+          
           <div className="card">
               <h2 className="title-card">Hospitalisations globales</h2>
             <Bar data ={chartData} options={chartData.options} />
@@ -151,6 +150,7 @@ const Chartjs = () => {
             <Line data ={decesGueris} options={decesGueris.options} />
             </div>
         </div>
+      </div>
     )
 }
  
