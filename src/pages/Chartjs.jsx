@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
-import Navbar from "../components/Navbar";
 import axios from "axios";
 
 

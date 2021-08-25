@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import * as centres from "../data/centres-vaccination.json";
-import Navbar from "../components/Navbar";
 import "./Map.css"
 import marker from "../images/markervert.png"
 import L from "leaflet"
@@ -19,16 +18,10 @@ function Map() {
   const [centreVacc, setCentreVacc] = React.useState(null);
 
   return (
-<<<<<<< HEAD
-    <div>
-      <Navbar />
-    <MapContainer center={[45.999054, 3.033400]} zoom={6}>
-=======
   <div>
     <Navbar/>
     <h1 className="centrevacc">Carte des centres de vaccinations français</h1>
      <MapContainer className="map-container" center={[45.999054, 3.033400]} zoom={5}>
->>>>>>> dev
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -57,11 +50,7 @@ function Map() {
                   }}
                   >
               <div>
-<<<<<<< HEAD
-                  <a href={centre.properties.c_rdv_site_web} target="blank">Site Web RDV</a>
-=======
                   <a href={centre.properties.c_rdv_site_web} target='blank' className="rdv">Prendre un Rendez-Vous</a>
->>>>>>> dev
                 <h2>{centre.properties.c_rdv_lundi}</h2>
                <h2>{centre.properties.c_nom}</h2>
                 <p>{centre.properties.c_com_nom}</p>
@@ -70,12 +59,8 @@ function Map() {
           </Marker>
         ))},
     </MapContainer>
-<<<<<<< HEAD
-    </div>
-=======
   </div>
     
->>>>>>> dev
   );
 }
 export default Map
