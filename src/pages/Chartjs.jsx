@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
 import Navbar from "../components/Navbar";
 import axios from "axios";
- 
+
+
 const Chartjs = () => {
     const [chartData, setChartData] = useState([]);
     const [decesGueris, setDecesGueris] = useState([]);
@@ -130,6 +132,7 @@ const Chartjs = () => {
   useEffect(() => {
     chart();
     }, []);
+
  
     return (
       <div className="backgroundChart">
