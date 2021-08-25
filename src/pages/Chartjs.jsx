@@ -1,9 +1,11 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import "./Chartjs.css";
 import { Bar, Line } from "react-chartjs-2";
 import { useState, useEffect} from 'react';
 import axios from "axios";
- 
+
+
 const Chartjs = () => {
     const [chartData, setChartData] = useState([]);
     const [decesGueris, setDecesGueris] = useState([]);
@@ -16,7 +18,7 @@ const Chartjs = () => {
          let gueris = [];
  
     axios
-      .get("https://a.nacapi.com/covidcustom")
+      .get("https://a.nacapi.com/covidcustom20210812")
       .then(res => {
         for (const dataObj of res.data.allLiveFranceData) {
           hospit.push(parseInt(dataObj.hospitalises));
@@ -52,7 +54,7 @@ const Chartjs = () => {
               },
               title: {
                 display: true,
-                text: "Hopitalisation par région"
+                text: "Hopitalisation par région",
               }
             },
             interaction: {
@@ -98,7 +100,7 @@ const Chartjs = () => {
               title: {
                 display: true,
                 text: "Guéris et Décès par région"
-              }
+              },
             }
           }
         });
@@ -108,10 +110,11 @@ const Chartjs = () => {
   useEffect(() => {
     chart();
     }, []);
+
  
     return (
-        <div className="container">
- 
+        <div className="containerChart">
+            <Navbar/>
             <div className="card">
             <Bar data ={chartData} options={chartData.options} />
             </div>
