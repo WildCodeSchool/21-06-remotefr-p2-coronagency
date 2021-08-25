@@ -1,14 +1,40 @@
+.backgroundChart{
+    background-color: #e2dada;
+}
 .containerChart {
     display: flex;
     flex-wrap: wrap;
 }
  
-.card{
+.card {
     width: 70%;
     margin-top: 5vh;
     margin-left: 20vw;
-    padding-bottom: 10vw;
+    padding-bottom: 3vh;
+    border: 2px solid black;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    background-color: white;
+    ;
 }
-h1{
+
+.titleChartLight {
     text-align: center;
+    color: #3b3131;
+    padding-top: 3vh;
+}
+.titleChartDark {
+    text-align: center;
+    color: #e2dada;
+}
+
+.titleCard {
+    text-align: center;
+    padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 767px) {
+.card {
+    height: auto;
+}
 }
