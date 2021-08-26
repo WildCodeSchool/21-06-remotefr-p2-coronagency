@@ -135,7 +135,7 @@ const Chartjs = () => {
  
     return (
       <div className="backgroundChart">
-        <h1 className="titleChartLight">Graphiques repérentant différentes données et affichées par région</h1>
+        <h1 className="titleChartLight">Données graphiques affichées par région</h1>
         <div className="containerChart">
           <Navbar />
           
