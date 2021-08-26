@@ -1,6 +1,4 @@
-.backgroundChart{
-    background-color: #e2dada;
-}
+
 .containerChart {
     display: flex;
     flex-wrap: wrap;
@@ -11,30 +9,23 @@
     margin-top: 5vh;
     margin-left: 20vw;
     padding-bottom: 3vh;
-    border: 2px solid black;
     padding-left: 1vh;
     padding-right: 1vh;
-    background-color: white;
     ;
 }
 
 .titleChartLight {
     text-align: center;
-    color: #3b3131;
     padding-top: 3vh;
-}
-.titleChartDark {
-    text-align: center;
-    color: #e2dada;
+    text-transform: uppercase;
 }
 
 .titleCard {
     text-align: center;
-    padding-bottom: 1vh;
+    padding-bottom: 2.5vh;
+    padding-top: 1vh;
 }
 
 @media screen and (max-width: 767px) {
-.card {
-    height: auto;
-}
+
 }
