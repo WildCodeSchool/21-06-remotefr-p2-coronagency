@@ -11,18 +11,32 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  /* margin-right: 50px; */
+  /* border: 2px solid pink; */
+  /* position: relative;
+  right: 13%; */
 }
+
+/* .form-username {
+  border: 2px solid green;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+} */
+
 label {
   color: var(--white-color);
   font-size: 1.2rem;
-  width: 147%;
+  width: 130%;
   display: block;
   text-align: center;
+  /* border: 2px solid yellow; */
 }
 
 input {
   height: 5vh;
-  width: 150%;
+  width: 130%;
+  /* width: 150%; */
   display: flex;
   margin-top: 1vh;
   background-color: var(--black-color);
@@ -32,6 +46,7 @@ input {
   padding: 10px 0;
   margin: 10px 0;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 
@@ -52,5 +67,15 @@ input {
 
 .signUpLoginBoxQuiz {
   background-color: var(--red-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid yellow; */
+}
+
+@media screen and (max-width: 767px) {
+    .form {
+      margin-right: 40px;
+    }
 }
 

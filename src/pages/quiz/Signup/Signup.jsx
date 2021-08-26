@@ -51,20 +51,20 @@ const Signup = () => {
   //   };
   return (
     <div className="signUpLoginBoxQuiz">
-      <div className="slContainer">
+      {/* <div className="slContainer"> */}
         <form className="form" onSubmit={handleSubmit(createUser)}>
           <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
             <input className="input"
               {...register('name', { required: true })}
-              placeholder="Votre nom"
+              placeholder="thierry"
               name="name"
               onChange={handleChange}
             />
             <label className="label" name="username">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
-              placeholder="Confirmation"
+              placeholder="thierry"
               name="name"
               onChange={handleChange}
             />
@@ -73,7 +73,7 @@ const Signup = () => {
             <label name="email">Entrer votre e-mail</label>
             <input
               {...register('email', { required: false })}
-              placeholder="Votre E-mail"
+              placeholder="thierry@contact.com"
               name="email"
               onChange={handleChange}
             />
@@ -82,7 +82,7 @@ const Signup = () => {
             <label name="password">Choisir un mot de passe</label>
             <input
               {...register('password', { required: true })}
-              placeholder="Votre mot de passe"
+              placeholder="thierry@contact.com"
               name="password"
               onChange={handleChange}
             />
@@ -97,7 +97,7 @@ const Signup = () => {
           <input type="submit" className="submit" />
         </form>
       </div>
-    </div>
+    // </div>
   );
 };
 
