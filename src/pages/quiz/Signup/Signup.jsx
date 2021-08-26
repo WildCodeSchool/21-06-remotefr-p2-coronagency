@@ -22,12 +22,13 @@ const Signup = () => {
       .post(
         'https://cors-anywhere.localhost:8000/api/users',
         {
-            method: 'POST', // The method
-            mode: 'no-cors', // It can be no-cors, cors, same-origin
-            credentials: 'same-origin', // It can be include, same-origin, omit
-            headers: {
-              'Content-Type': 'application/json', // Your headers
-            }},
+          method: 'POST', // The method
+          mode: 'no-cors', // It can be no-cors, cors, same-origin
+          credentials: 'same-origin', // It can be include, same-origin, omit
+          headers: {
+            'Content-Type': 'application/json', // Your headers
+          },
+        },
         { ...data }
       )
       .catch(function (err) {
@@ -54,13 +55,13 @@ const Signup = () => {
         <form className="form" onSubmit={handleSubmit(createUser)}>
           <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
-            <input
+            <input className="input"
               {...register('name', { required: true })}
               placeholder="johndoe"
               name="name"
               onChange={handleChange}
             />
-            <label name="username">Confirmer votre nom d'utilisateur</label>
+            <label className="label" name="username">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
               placeholder="johndoe"
@@ -91,7 +92,7 @@ const Signup = () => {
               onChange={handleChange}
             />
           </div>
-          <input type="submit" />
+          <input type="submit" className="submit" />
         </form>
       </div>
     </div>
