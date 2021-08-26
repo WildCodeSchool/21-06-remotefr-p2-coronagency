@@ -48,7 +48,7 @@ const Chartjs = () => {
               label: "Nbre hospitalisation",
               data: hospit,
               backgroundColor: "#13C697",
-              borderColor: "#13C697"
+              borderColor: "#13C697",
             },
           ],
           options:{
@@ -59,9 +59,15 @@ const Chartjs = () => {
             scales: {
               x: {
                 stacked: true,
+                grid: {
+                  color: 'gray',
+                },
               },
               y: {
                 stacked:true,
+                grid: {
+                  color: 'gray',
+                },
               },
             },
           }
@@ -93,9 +99,15 @@ const Chartjs = () => {
             scales: {
               x: {
                 stacked: true,
+                grid: {
+                  color: 'gray',
+                },
               },
               y: {
                 stacked:true,
+                grid: {
+                  color: 'gray',
+                },
               },
             },
           }
@@ -123,7 +135,20 @@ const Chartjs = () => {
           ],
           options:{
             responsive: true,
-          }
+            scales: {
+              x: {
+                grid: {
+                  color: 'gray',
+                },
+              },
+              y: {
+                grid: {
+                  color: 'gray',
+                },
+              },
+            },
+          },
+          
         });
       })
   };
@@ -140,7 +165,7 @@ const Chartjs = () => {
           <Navbar />
           
           <div className="card">
-              <h2 className="titleCard">Hospitalisations globales</h2>
+              <h2 className="titleCard">Hospitalisations totales</h2>
             <Bar data ={chartData} options={chartData.options} />
             </div>
             <div className="card">
