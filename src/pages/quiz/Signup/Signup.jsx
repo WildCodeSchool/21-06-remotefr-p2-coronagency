@@ -22,12 +22,13 @@ const Signup = () => {
       .post(
         'https://cors-anywhere.localhost:8000/api/users',
         {
-            method: 'POST', // The method
-            mode: 'no-cors', // It can be no-cors, cors, same-origin
-            credentials: 'same-origin', // It can be include, same-origin, omit
-            headers: {
-              'Content-Type': 'application/json', // Your headers
-            }},
+          method: 'POST', // The method
+          mode: 'no-cors', // It can be no-cors, cors, same-origin
+          credentials: 'same-origin', // It can be include, same-origin, omit
+          headers: {
+            'Content-Type': 'application/json', // Your headers
+          },
+        },
         { ...data }
       )
       .catch(function (err) {
@@ -54,16 +55,16 @@ const Signup = () => {
         <form className="form" onSubmit={handleSubmit(createUser)}>
           <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
-            <input
+            <input className="input"
               {...register('name', { required: true })}
-              placeholder="johndoe"
+              placeholder="Votre nom"
               name="name"
               onChange={handleChange}
             />
-            <label name="username">Confirmer votre nom d'utilisateur</label>
+            <label className="label" name="username">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
-              placeholder="johndoe"
+              placeholder="Confirmation"
               name="name"
               onChange={handleChange}
             />
@@ -72,7 +73,7 @@ const Signup = () => {
             <label name="email">Entrer votre e-mail</label>
             <input
               {...register('email', { required: false })}
-              placeholder="johndoe@contact.com"
+              placeholder="Votre E-mail"
               name="email"
               onChange={handleChange}
             />
@@ -81,17 +82,19 @@ const Signup = () => {
             <label name="password">Choisir un mot de passe</label>
             <input
               {...register('password', { required: true })}
+              placeholder="Votre mot de passe"
               name="password"
               onChange={handleChange}
             />
             <label name="password">Confirmer votre mot de passe</label>
             <input
               {...register('password', { required: true })}
+              placeholder="Confirmation du mot de passe"
               name="password"
               onChange={handleChange}
             />
           </div>
-          <input type="submit" />
+          <input type="submit" className="submit" />
         </form>
       </div>
     </div>
