@@ -14,12 +14,11 @@
 
 .titleChartLight{
     font-style: italic;
-    display: flex;
-    text-align:center;
+    width: 100%;
+    text-align: center;
     text-transform: uppercase;
     font-size: 1.9em;
-    padding-left: 435px;
-    margin-top: 45px;
+    margin-top: 4vh;
 }
 
 .titleCard {
@@ -32,11 +31,23 @@
 
 
 @media screen and (max-width: 767px) {
-  .card {
-    height: auto;
+ 
+.card {
+    width: 70%;
+    margin-top: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
-canvas{
-    background-color: white;
+
+.containerChart {
+    display: flex;
+    flex-direction: column;
 }
-  
+
+.card {
+    width: 100%;
+}
+
 }

@@ -69,7 +69,21 @@
   justify-content: space-around;
 }
 
-button {
+.sub {
+  width: 100%;
+  font-size: 16px;
+  color: var(--white-color);
+  background-color: var(--black-color);;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid var(--black-color);
+  cursor: pointer;
+}
+
+.again {
   width: 100%;
   font-size: 16px;
   color: var(--white-color);
@@ -99,9 +113,9 @@ button:focus {
   outline: none;
 }
 
-button svg {
-  margin-right: 5px;
-}
+// button svg {
+//   margin-right: 5px;
+// }
 
 .again {
   width: 50%;

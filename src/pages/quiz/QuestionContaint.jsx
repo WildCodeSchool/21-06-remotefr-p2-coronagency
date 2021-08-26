@@ -134,7 +134,7 @@ function QuestionContaint() {
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button classname="sub" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							<button className="sub" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
 					</div>
 				</>

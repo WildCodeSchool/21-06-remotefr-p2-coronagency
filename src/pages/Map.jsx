@@ -21,6 +21,7 @@ function Map() {
   <div>
     <Navbar/>
     <h1 className="centrevacc">Carte des centres de vaccinations français</h1>
+    <div className="prout">
      <MapContainer className="map-container" center={[45.999054, 3.033400]} zoom={6}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -59,6 +60,7 @@ function Map() {
           </Marker>
         ))},
     </MapContainer>
+    </div>
   </div>
     
   );
