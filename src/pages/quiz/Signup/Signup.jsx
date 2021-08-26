@@ -57,14 +57,14 @@ const Signup = () => {
             <label name="name">Choisir un nom d'utilisateur</label>
             <input className="input"
               {...register('name', { required: true })}
-              placeholder="johndoe"
+              placeholder="Votre nom"
               name="name"
               onChange={handleChange}
             />
             <label className="label" name="username">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
-              placeholder="johndoe"
+              placeholder="Confirmation"
               name="name"
               onChange={handleChange}
             />
@@ -73,7 +73,7 @@ const Signup = () => {
             <label name="email">Entrer votre e-mail</label>
             <input
               {...register('email', { required: false })}
-              placeholder="johndoe@contact.com"
+              placeholder="Votre E-mail"
               name="email"
               onChange={handleChange}
             />
@@ -82,12 +82,14 @@ const Signup = () => {
             <label name="password">Choisir un mot de passe</label>
             <input
               {...register('password', { required: true })}
+              placeholder="Votre mot de passe"
               name="password"
               onChange={handleChange}
             />
             <label name="password">Confirmer votre mot de passe</label>
             <input
               {...register('password', { required: true })}
+              placeholder="Confirmation du mot de passe"
               name="password"
               onChange={handleChange}
             />
