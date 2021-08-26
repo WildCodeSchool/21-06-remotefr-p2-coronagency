@@ -6,32 +6,43 @@
     margin-left: 20vw;
   }
   .rdv{
-    box-shadow: teal;
-    text-decoration-color: tomato;
+   text-decoration-color: tomato;
     font-size: 1.3em;
   }
 
 .centrevacc{
    font-style: italic;
     display: flex;
-    text-align:center;
-    text-transform: uppercase;
     font-size: 1.9em;
-    padding-left: 365px;
+    margin-left: 435px;
     margin-top: 45px;
-
 }
-
+.Horaire{
+  display: flex;
+  margin-top: 10px;
+}
 /* .map-container{
   position: absolute;
   display: flex;
   margin-top: 100px;
   margin-left: 280px;
-
 } */
   
 /* a{
   text-decoration-color: turquoise;
 }
    */
+   .ville{
+     display: flex;
+     justify-content: flex-start;
+    font-size: 1.6em;
+    font-style: italic;
+    font-family: var(--main-font,--second-font);
+    background-color : #86e682;  
+   }
+  .leaflet-popup-content-wrapper{
+    /* background-color: #86e682; */
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  }
+  
   
