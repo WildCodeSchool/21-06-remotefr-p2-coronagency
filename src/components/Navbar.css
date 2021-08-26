@@ -7,7 +7,6 @@
     font-family: var(--second-font);
     align-items: center;
     padding-left: 1vw;
-    
 }
 
 .link {
@@ -31,26 +30,43 @@
     border: var(--second-color) 2px solid;
 }
 
-.darkmodbutton {
-    /* color: var(--main-color); */
-    background-color: var(--second-color);
-    padding: 2vh;
-    /* border: var(--main-color) 2px solid;
-    width: 100%;
-    box-sizing: border-box;
+.darkB {
     display: flex;
-    justify-content: center;
-    margin-top: 1vh;
-    margin-bottom: 1vh; */
+    flex-direction: row;
+
 }
+
 .sun{
-    margin-right: 10px;
+    margin-right: 0.3vw;
     display: inline-block;
     flex-direction: row;
     background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: var(--black-color);;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
 }
+
 .lune{
    display: inline-block;
    flex-direction: row;
    background-color: transparent;
+   width: 100%;
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: var(--black-color);;
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
 }
