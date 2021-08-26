@@ -1,4 +1,3 @@
-
 .containerChart {
     display: flex;
     flex-wrap: wrap;
@@ -11,21 +10,33 @@
     padding-bottom: 3vh;
     padding-left: 1vh;
     padding-right: 1vh;
-    ;
 }
 
-.titleChartLight {
-    text-align: center;
-    padding-top: 3vh;
+.titleChartLight{
+    font-style: italic;
+    display: flex;
+    text-align:center;
     text-transform: uppercase;
+    font-size: 1.9em;
+    padding-left: 435px;
+    margin-top: 45px;
 }
 
 .titleCard {
     text-align: center;
     padding-bottom: 2.5vh;
     padding-top: 1vh;
+    padding-bottom: 25px;
+    margin-top: 45px;
 }
 
-@media screen and (max-width: 767px) {
 
+@media screen and (max-width: 767px) {
+  .card {
+    height: auto;
+}
+canvas{
+    background-color: white;
+}
+  
 }
