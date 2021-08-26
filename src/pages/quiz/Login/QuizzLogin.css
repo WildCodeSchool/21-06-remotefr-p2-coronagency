@@ -47,3 +47,13 @@
     right: 10%;
     animation: anim-virus 10s linear reverse backwards infinite;
 }
+
+@media screen and (max-width: 767px) {
+    .slContainer{
+      margin-left: 30px;
+    }
+    .valide {
+        margin-right: 15px ;
+    }
+}
+
