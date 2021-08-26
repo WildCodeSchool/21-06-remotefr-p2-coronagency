@@ -1,9 +1,15 @@
+:root {
+    --white-color: #e2dada;
+    --red-color: #9d0208;
+    --black-color: #3b3131;
+  }
+
 .Question {
     margin: 20px;
 
     .progress {
         display: flex;
-        border: 3px solid black;
+        border: 3px solid var(--black-color);;
         justify-content: space-around;
         margin: 20px 0;
     }
