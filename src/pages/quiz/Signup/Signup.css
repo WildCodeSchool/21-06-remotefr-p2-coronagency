@@ -4,25 +4,14 @@
   --black-color: #3b3131;
 }
 
-.form {
+.form1 {
   display: flex;
   flex-direction: column;
   height: 70vh;
   width: 100%;
   justify-content: center;
   align-items: center;
-  /* margin-right: 50px; */
-  /* border: 2px solid pink; */
-  /* position: relative;
-  right: 13%; */
 }
-
-/* .form-username {
-  border: 2px solid green;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-} */
 
 label {
   color: var(--white-color);
@@ -50,7 +39,7 @@ input {
 }
 
 
-.submit {
+.submit1 {
   box-sizing: border-box;
   height: auto;
   margin-top: 15px;
@@ -65,17 +54,36 @@ input {
   left: 45px;
 }
 
-.signUpLoginBoxQuiz {
+.signUpLoginBoxQuiz1 {
   background-color: var(--red-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 3px solid yellow; */
 }
 
 @media screen and (max-width: 767px) {
-    .form {
-      margin-right: 40px;
+    .form1 {
+      margin-top: 1vh;
+      height: 55vh;
+    }
+
+    input {
+      height: 4vh;
+      width: 100%;
+      margin-top: 1vh;
+      margin: 10px 0;
+      margin-right: 80px;
+    }
+
+    label {
+      width: 100%;
     }
 }
-
+@media screen and (min-width: 768px) {
+    .form1 {
+      margin-right: 50px;
+    }
+    .submit1 {
+      margin-right: 35px;
+    }
+}

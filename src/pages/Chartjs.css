@@ -32,7 +32,15 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 .card{
     margin-bottom: 5vh;
+    margin-left: 5vw;
+    width: 90%;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5vh;
+    
 }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -44,7 +52,7 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 5vh;
+    margin-bottom: 7vh;
 }
 
 .containerChart {
