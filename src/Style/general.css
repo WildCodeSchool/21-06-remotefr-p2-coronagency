@@ -27,4 +27,6 @@ body.light-mode {
 body.dark-mode {
   background-color:var(--black-color);
   color: var(--white-color);
+ transition: background-color 0.3s ease;
+
 }

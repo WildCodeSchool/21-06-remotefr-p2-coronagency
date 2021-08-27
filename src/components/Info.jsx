@@ -19,15 +19,15 @@ function Info() {
             </div>
             <div className="container-2">
             <aside className="article">
-                Les coronavirus (CoV) sont des virus qui constituent la sous-famille Orthocoronavirinae de la famille Coronaviridae. 
-                Le nom « coronavirus », du latin signifiant « virus à couronne », 
+                <div className="miniparaph"> Les coronavirus (CoV) sont des virus qui constituent la sous-famille Orthocoronavirinae de la famille Coronaviridae.</div>
+                <div className="miniparaph">Le nom « coronavirus », du latin signifiant « virus à couronne », 
                 est dû à l'apparence des virions sous un microscope électronique,
-                 avec une frange de grandes projections bulbeuses qui évoquent une couronne solaire.
-                Les coronavirus sont munis d'une enveloppe virale incluant une capside caractérisée par des protéines en forme de massue (appelées spicules). 
+                 avec une frange de grandes projections bulbeuses qui évoquent une couronne solaire.</div>
+                <div className="miniparaph">Les coronavirus sont munis d'une enveloppe virale incluant une capside caractérisée par des protéines en forme de massue (appelées spicules). 
                 Ils ont un génome à ARN monocaténaire (c'est-à-dire à un seul brin), de sens positif (groupe IV de la classification Baltimore), 
-                de 26 à 32 kilobases (ce qui en fait les plus grands génomes parmi les virus à ARN). 
-                Ils se classent parmi les Nidovirales, ordre de virus produisant un jeu imbriqué d'ARNm sous-génomiques lors de l'infection.
-                 Des spicules, une enveloppe, membrane et capside contribuent à la structure d'ensemble de tous les coronavirus. Ils peuvent muter et se recombiner.
+                de 26 à 32 kilobases (ce qui en fait les plus grands génomes parmi les virus à ARN).</div>
+                <div className="miniparaph">Ils se classent parmi les Nidovirales, ordre de virus produisant un jeu imbriqué d'ARNm sous-génomiques lors de l'infection.
+                 Des spicules, une enveloppe, membrane et capside contribuent à la structure d'ensemble de tous les coronavirus. Ils peuvent muter et se recombiner.</div>
             </aside>
             </div>
         </div>

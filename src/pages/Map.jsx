@@ -21,7 +21,8 @@ function Map() {
   <div>
     <Navbar/>
     <h1 className="centrevacc">Carte des centres de vaccinations français</h1>
-     <MapContainer className="map-container" center={[45.999054, 3.033400]} zoom={5}>
+    <div className="prout">
+     <MapContainer className="map-container" center={[45.999054, 3.033400]} zoom={6}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -51,14 +52,15 @@ function Map() {
                   >
               <div>
                   <a href={centre.properties.c_rdv_site_web} target='blank' className="rdv">Prendre un Rendez-Vous</a>
-                <h2>{centre.properties.c_rdv_lundi}</h2>
-               <h2>{centre.properties.c_nom}</h2>
-                <p>{centre.properties.c_com_nom}</p>
+                <h2 className="Horaire">{centre.properties.c_rdv_lundi}</h2>
+               <h2 className="Chu">{centre.properties.c_nom}</h2>
+                <p className="ville">{centre.properties.c_com_nom}</p>
                  </div>
              </Popup>
           </Marker>
         ))},
     </MapContainer>
+    </div>
   </div>
     
   );

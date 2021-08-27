@@ -1,8 +1,10 @@
 const connection = require('./db-config');
 const express = require('express');
 const app = express();
+const cors = express("cors");
+const mongoose = require("mongoose");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 connection.connect((err) => {
   if (err) {
@@ -11,8 +13,10 @@ connection.connect((err) => {
     console.log('connected as id ' + connection.threadId);
   }
 });
-
+app.use(cors());
 app.use(express.json());
+// connection mongosedb
+
 
 app.get('/api/movies', (req, res) => {
   connection.query('SELECT * FROM movies', (err, result) => {
