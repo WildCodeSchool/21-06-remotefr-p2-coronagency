@@ -38,7 +38,7 @@ const Signup = () => {
   };
 
   const validation = () => {
-    history.push('/quizz');
+    history.push('/quizz/login');
   };
 
   const next = () => {
@@ -46,9 +46,7 @@ const Signup = () => {
     validation();
   };
 
-  //   const handleChange = (event) => {
-  //     setFormAll({ ...formAll, [event.target.name]: event.target.value });
-  //   };
+
   return (
     <div className="signUpLoginBoxQuiz1">
       {/* <div className="slContainer"> */}
@@ -91,6 +89,7 @@ const Signup = () => {
               {...register('password', { required: true })}
               placeholder="Confirmation du mot de passe"
               name="password"
+              type="password"
               onChange={handleChange}
             />
           </div>
