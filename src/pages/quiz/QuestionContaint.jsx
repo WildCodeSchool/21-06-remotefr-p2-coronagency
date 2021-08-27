@@ -46,7 +46,6 @@ function QuestionContaint() {
 				{ answerText: "Occitanie", isCorrect: false },
 				{ answerText: "Île-de-France", isCorrect: true },
 				{ answerText: "Martinique", isCorrect: false },
-				{ answerText: "Normandie", isCorrect: false },
 			],
 		},
 		{
@@ -62,9 +61,9 @@ function QuestionContaint() {
 			questionText: "Quelle est la principale cause de propagation du virus ?",
 			answerOptions: [
 				{ answerText: "Lorsque que l'on retourne son masque (pour l'utiliser deux fois)", isCorrect: false },
-				{ answerText: "Lors d'appels téléphonique (de petites particules passent par les ondes)", isCorrect: false},
-				{ answerText: "Par somatisation (vous êtes tellement persuadé d'être infecté que vous transmettez le virus)", isCorrect: false },
-				{ answerText: "Lors de contacts étroits (repas, conversations, ...)", isCorrect: true },
+				{ answerText: "Lors d'appels téléphonique (des particules passent par les ondes)", isCorrect: false},
+				{ answerText: "Par somatisation (vous êtes tellement persuadé d'être infecté que vous le transmettez)", isCorrect: false },
+				{ answerText: "Lors de contacts étroits (repas, ...)", isCorrect: true },
 			],
 		},
 		{

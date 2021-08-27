@@ -15,7 +15,7 @@ function Navbar() {
             <Link to="/graphiques" className="link">GRAPHIQUES</Link>
             <Link to="/centres" className="link">CENTRES DE VACCINATION</Link>
             <Link to="/quizz" target="_blank" className="link">QUIZZ</Link>
-             <Darkmod/>
+        <Darkmod/>
         </div>
     
         <div className="navbar2">

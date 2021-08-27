@@ -62,6 +62,12 @@
         align-content: space-around;
         height: 22vh;
     }
+
+    .miniparaph{
+        line-height: 30px;
+        margin-bottom: 2vh;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -93,5 +99,4 @@
         line-height: 30px;
         margin-bottom: 2vh;
     }
-
 }

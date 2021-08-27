@@ -29,7 +29,6 @@
   color: var(--white-color);
 }
 
-/* QUESTION/TIMER/LEFT SECTION */
 .question-section {
   width: 100%;
   position: relative;
@@ -61,7 +60,6 @@
   text-align: center;
 }
 
-/* ANSWERS/RIGHT SECTION */
 .answer-section {
   width: 100%;
   display: flex;
@@ -113,12 +111,57 @@ button:focus {
   outline: none;
 }
 
-// button svg {
-//   margin-right: 5px;
-// }
-
 .again {
   width: 50%;
   font-size: 25px;
   justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+
+  .appQuiz {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    width: 80%;
+
+    height: 100%;
+    
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+  .question-section {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .question-count {
+    margin-bottom: 20px;
+  }
+  
+  .question-count span {
+    font-size: 40px;
+  }
+
+  .sub {
+    margin-bottom: 1vh;
+  }
+
+  .score-section {
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .again {
+    margin-top: 7vh;
+    width: 80%;
+    font-size: 25px;
+  }
+
 }

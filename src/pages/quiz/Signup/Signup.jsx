@@ -50,21 +50,21 @@ const Signup = () => {
   //     setFormAll({ ...formAll, [event.target.name]: event.target.value });
   //   };
   return (
-    <div className="signUpLoginBoxQuiz">
-      <div className="slContainer">
-        <form className="form" onSubmit={handleSubmit(createUser)}>
-          <div className="form-username">
+    <div className="signUpLoginBoxQuiz1">
+      {/* <div className="slContainer"> */}
+        <form className="form1" onSubmit={handleSubmit(createUser)}>
+          <div className="form-username1">
             <label name="name">Choisir un nom d'utilisateur</label>
-            <input className="input"
+            <input className="input1"
               {...register('name', { required: true })}
-              placeholder="Votre nom"
+              placeholder="thierry"
               name="name"
               onChange={handleChange}
             />
-            <label className="label" name="username">Confirmer votre nom d'utilisateur</label>
+            <label className="label1" name="username">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
-              placeholder="Confirmation"
+              placeholder="thierry"
               name="name"
               onChange={handleChange}
             />
@@ -73,16 +73,16 @@ const Signup = () => {
             <label name="email">Entrer votre e-mail</label>
             <input
               {...register('email', { required: false })}
-              placeholder="Votre E-mail"
+              placeholder="thierry@contact.com"
               name="email"
               onChange={handleChange}
             />
           </div>
-          <div className="form-password">
+          <div className="form-password1">
             <label name="password">Choisir un mot de passe</label>
             <input
               {...register('password', { required: true })}
-              placeholder="Votre mot de passe"
+              placeholder="thierry@contact.com"
               name="password"
               onChange={handleChange}
             />
@@ -94,10 +94,10 @@ const Signup = () => {
               onChange={handleChange}
             />
           </div>
-          <input type="submit" className="submit" />
+          <input type="submit" className="submit1" />
         </form>
       </div>
-    </div>
+    // </div>
   );
 };
 
