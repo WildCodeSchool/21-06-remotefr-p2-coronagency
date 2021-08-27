@@ -103,11 +103,6 @@
         margin-bottom: 1vh;
     }
     
-    .link2:hover {
-        color: var(--second-color);
-        background-color: var(--main-color);
-        border: var(--second-color) 2px solid;
-    }
 
     .icon {
         height: 80px;
@@ -140,12 +135,7 @@
         transition: 400ms;
         margin-top: 1vh;
         margin-bottom: 1vh;
-    }
-    
-    .link2:hover {
-        color: var(--second-color);
-        background-color: var(--main-color);
-        border: var(--second-color) 2px solid;
+        background-color: transparent;
     }
 
     .icon {
