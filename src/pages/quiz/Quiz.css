@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap%27');
 
+* {
+  margin: 0;
+}
+
 :root {
   --white-color: #e2dada;
-  --red-color: #EB1D27;
+  --red-color: #9d0208;
   --black-color: #3b3131;
 }
 
@@ -95,16 +99,18 @@ header {
 }
 
 .btn-welcome {
-  border: 2px solid var(--black-color);
-  color: var(--black-color);
+  border: 3px solid var(--black-color);
+  /* color: var(--black-color); */
   padding: 12px 25px;
   border-radius: 5px;
-  background-color: transparent;
-  font-weight: normal;
+  /* background-color: transparent; */
+  font-weight: 600;
   font-size: 19px;
   text-align: center;
   text-decoration: none;
   margin-top: 150px;
+  color: var(--white-color);
+  background-color: var(--black-color);
 }
 
 .btn-welcome:hover {
@@ -119,7 +125,6 @@ footer {
 }
 
 .footer-container {
-  padding: 20px 0;
   padding: 20px 0;
   flex: 0 1 80%;
 }
@@ -163,4 +168,34 @@ footer {
 .slContainer {
   flex: 0 1 80%;
   display: flex;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .welcomePage {
+    height: 1000px;
+    background-size: 90%;
+    background-position-y: 5vh;
+  }
+  
+  .btn-welcome { 
+    margin-top: 7vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .welcomePage {
+    height: 470px;
+    background-size: 80%;
+  background-position-y: 15vh;
+  }
+
+  .btn-welcome { 
+    margin-top: 7vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
 }
