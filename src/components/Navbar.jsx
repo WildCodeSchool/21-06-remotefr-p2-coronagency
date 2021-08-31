@@ -19,11 +19,11 @@ function Navbar() {
         </div>
     
         <div className="navbar2">
-            <Link to="/" className="link2"><img src={image} className="icon" /></Link>
+            <Link to="/" className="link2"><img src={image} className="icon"/></Link>
             <Link to="/graphiques" className="link2"><img src={image2} className="icon"/></Link>
             <Link to="/centres" className="link2"><img src={image3} className="icon"/></Link>
             <Link to="/quizz" target="_blank" className="link2"><img src={image4} className="icon"/></Link>
-         <Darkmod/>
+        <Darkmod/>
         </div>
     </div> 
     )

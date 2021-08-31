@@ -1,6 +1,5 @@
 import React from 'react';
 import useDarkMode from 'use-dark-mode';
-import Toggle from './Toggle';
  import "./Navbar.css"
 
 const Darkmod = () => {

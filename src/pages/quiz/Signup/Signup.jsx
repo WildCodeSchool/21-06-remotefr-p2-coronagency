@@ -49,8 +49,7 @@ const Signup = () => {
 
   return (
     <div className="signUpLoginBoxQuiz1">
-      {/* <div className="slContainer"> */}
-        <form className="form1" onSubmit={handleSubmit(createUser)}>
+        <form className="form1" onSubmit={handleSubmit(validation)}>
           <div className="form-username1">
             <label name="name">Choisir un nom d'utilisateur</label>
             <input className="input1"
@@ -80,7 +79,8 @@ const Signup = () => {
             <label name="password">Choisir un mot de passe</label>
             <input
               {...register('password', { required: true })}
-              placeholder="thierry@contact.com"
+              placeholder="mot de passe"
+              type="password"
               name="password"
               onChange={handleChange}
             />
