@@ -126,7 +126,6 @@ footer {
 
 .footer-container {
   padding: 20px 0;
-  padding: 20px 0;
   flex: 0 1 80%;
 }
 
@@ -169,4 +168,34 @@ footer {
 .slContainer {
   flex: 0 1 80%;
   display: flex;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .welcomePage {
+    height: 1000px;
+    background-size: 90%;
+    background-position-y: 5vh;
+  }
+  
+  .btn-welcome { 
+    margin-top: 7vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .welcomePage {
+    height: 470px;
+    background-size: 80%;
+  background-position-y: 15vh;
+  }
+
+  .btn-welcome { 
+    margin-top: 7vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
 }
