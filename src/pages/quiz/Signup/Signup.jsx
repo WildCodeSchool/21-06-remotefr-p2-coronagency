@@ -31,7 +31,7 @@ const Signup = () => {
   return (
     <div className="signUpLoginBoxQuiz">
       <div className="slContainer">
-        {/* <form className="form" onSubmit={handleSubmit()}>
+        <form className="form" onSubmit={handleSubmit()}>
           <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
             <input className="input1"
@@ -76,7 +76,7 @@ const Signup = () => {
             />
           </div>
           <input type="submit" className="submit1" />
-        </form> */}
+        </form>
       </div>
     </div>
   );
