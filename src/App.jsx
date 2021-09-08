@@ -1,19 +1,14 @@
+import {Switch, Route} from "react-router-dom";
 import Info from "./components/Info";
 import Chartjs from "./pages/Chartjs";
-import Quiz from "./pages/quiz/Quiz";
-import {Switch, Route} from "react-router-dom";
-import './App.css';
 import Map from "./pages/Map"
-import "./Style/general.css";
+import Quiz from "./pages/quiz/Quiz";
 import QuestionContaint from "./pages/quiz/QuestionContaint"
+import './style/general.css';
 
 function App() {
-
- 
   return (
     <div className="App">
-              
-
       <Switch>
         <Route exact path="/" component={Info}/>
         <Route path="/graphiques" component={Chartjs}/>

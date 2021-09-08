@@ -5,53 +5,33 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 const Signup = () => {
-  const test = (data) => {
-    alert(JSON.stringify(...data));
-  };
+  // unfinished feature
 
   let history = useHistory();
-  const { register, handleSubmit, handleChange } = useForm();
+  
+  const { register, handleSubmit } = useForm();
   const [formAll, setFormAll] = useState({
     name: '',
     email: '',
     password: '',
   });
 
-  const createUser = (data) => {
-    axios
-      .post(
-        'https://cors-anywhere.localhost:8000/api/users',
-        {
-            method: 'POST', // The method
-            mode: 'no-cors', // It can be no-cors, cors, same-origin
-            credentials: 'same-origin', // It can be include, same-origin, omit
-            headers: {
-              'Content-Type': 'application/json', // Your headers
-            }},
-        { ...data }
-      )
-      .catch(function (err) {
-        console.log('error');
-      })
-      .then(console.log('success'));
+  const handleChange = (event) => {
+    setFormAll({ ...formAll, [event.target.name]: event.target.value });
   };
 
-  const validation = () => {
-    history.push('/quizz');
-  };
+  let config = {
+    mode:"cors",
+    headers: {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+      }
+    }
 
-  const next = () => {
-    createUser();
-    validation();
-  };
-
-  //   const handleChange = (event) => {
-  //     setFormAll({ ...formAll, [event.target.name]: event.target.value });
-  //   };
   return (
     <div className="signUpLoginBoxQuiz">
       <div className="slContainer">
-        <form className="form" onSubmit={handleSubmit(createUser)}>
+        <form className="form" onSubmit={handleSubmit()}>
           <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
             <input
@@ -60,7 +40,7 @@ const Signup = () => {
               name="name"
               onChange={handleChange}
             />
-            <label name="username">Confirmer votre nom d'utilisateur</label>
+            <label name="name-conf">Confirmer votre nom d'utilisateur</label>
             <input
               {...register('name', { required: true })}
               placeholder="johndoe"
@@ -84,7 +64,7 @@ const Signup = () => {
               name="password"
               onChange={handleChange}
             />
-            <label name="password">Confirmer votre mot de passe</label>
+            <label name="password-conf">Confirmer votre mot de passe</label>
             <input
               {...register('password', { required: true })}
               name="password"
