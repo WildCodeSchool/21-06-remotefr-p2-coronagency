@@ -5,52 +5,33 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 const Signup = () => {
-  const test = (data) => {
-    alert(JSON.stringify(...data));
-  };
+  // unfinished feature
 
   let history = useHistory();
-  const { register, handleSubmit, handleChange } = useForm();
+  
+  const { register, handleSubmit } = useForm();
   const [formAll, setFormAll] = useState({
     name: '',
     email: '',
     password: '',
   });
 
-  const createUser = (data) => {
-    axios
-      .post(
-        'https://cors-anywhere.localhost:8000/api/users',
-        {
-          method: 'POST', // The method
-          mode: 'no-cors', // It can be no-cors, cors, same-origin
-          credentials: 'same-origin', // It can be include, same-origin, omit
-          headers: {
-            'Content-Type': 'application/json', // Your headers
-          },
-        },
-        { ...data }
-      )
-      .catch(function (err) {
-        console.log('error');
-      })
-      .then(console.log('success'));
-  };
+  const handleChange = (event) => {
+    setFormAll({ ...formAll, [event.target.name]: event.target.value });
 
-  const validation = () => {
-    history.push('/quizz/login');
-  };
-
-  const next = () => {
-    createUser();
-    validation();
-  };
-
+  let config = {
+    mode:"cors",
+    headers: {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+      }
+    }
 
   return (
-    <div className="signUpLoginBoxQuiz1">
-        <form className="form1" onSubmit={handleSubmit(validation)}>
-          <div className="form-username1">
+    <div className="signUpLoginBoxQuiz">
+      <div className="slContainer">
+        <form className="form" onSubmit={handleSubmit()}>
+          <div className="form-username">
             <label name="name">Choisir un nom d'utilisateur</label>
             <input className="input1"
               {...register('name', { required: true })}
@@ -84,7 +65,7 @@ const Signup = () => {
               name="password"
               onChange={handleChange}
             />
-            <label name="password">Confirmer votre mot de passe</label>
+            <label name="password-conf">Confirmer votre mot de passe</label>
             <input
               {...register('password', { required: true })}
               placeholder="Confirmation du mot de passe"

@@ -1,5 +1,6 @@
 const connection = require('./db-config');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const cors = express("cors");
 const mongoose = require("mongoose");
@@ -15,20 +16,21 @@ connection.connect((err) => {
 });
 app.use(cors());
 app.use(express.json());
-// connection mongosedb
+app.use(cors({
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 
-app.get('/api/movies', (req, res) => {
-  connection.query('SELECT * FROM movies', (err, result) => {
-    if (err) {
-      res.status(500).send('Error retrieving data from database');
-    } else {
-      res.json(result);
-    }
-  });
+app.options('*', cors())
+
+
+app.all('', function(req, res, next) {
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  next();
 });
 
-app.get('/api/users', (req, res) => {
+app.get('/api/users', cors(), (req, res) => {
   connection.query('SELECT * FROM users', (err, result) => {
     if (err) {
       res.status(500).send('Error retrieving users from database');
@@ -38,26 +40,11 @@ app.get('/api/users', (req, res) => {
   });
 });
 
-app.post('/api/movies', (req, res) => {
-  const { title, director, year, color, duration } = req.body;
+app.post('/api/users', cors(), (req, res) => {
+  const { name, email, password } = req.body;
   connection.query(
-    'INSERT INTO movies (title, director, year, color, duration) VALUES (?, ?, ?, ?, ?)',
-    [title, director, year, color, duration],
-    (err, result) => {
-      if (err) {
-        res.status(500).send('Error saving the movie');
-      } else {
-        res.status(201).send('Movie successfully saved');
-      }
-    }
-  );
-});
-
-app.post('/api/users', (req, res) => {
-  const { firstname, lastname, email } = req.body;
-  connection.query(
-    'INSERT INTO users (firstname, lastname, email) VALUES (?, ?, ?)',
-    [firstname, lastname, email],
+    'INSERT INTO users (name, email, password) VALUES (?, ?, ?)',
+    [name, email, password],
     (err, result) => {
       if (err) {
         console.error(err);
@@ -69,7 +56,7 @@ app.post('/api/users', (req, res) => {
   );
 });
 
-app.put('/api/users/:id', (req, res) => {
+app.put('/api/users/:id', cors(),  (req, res) => {
   const userId = req.params.id;
   const userPropsToUpdate = req.body;
   connection.query(

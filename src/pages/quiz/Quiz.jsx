@@ -3,7 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import QuizHeader from "./QuizHeader";
 import QuizLanding from "./QuizLanding";
 import QuizFooter from "./QuizFooter";
-import Welcome from "./Welcome/index";
+import Welcome from "./Welcome/Index";
 import Login from "./Login/QuizzLogin";
 import Signup from "./Signup/Signup";
 import ErrorPage from "./ErrorPage/index";
@@ -13,9 +13,7 @@ import './Quiz.css';
 function Quiz() {
   return (
     <div className="bodyQuiz">
-
-      <QuizHeader/>
-
+    <QuizHeader/>
     <Switch>
       <Route exact path="/quizz" component={QuizLanding}/>
       <Route exact path="/quizz/welcome" component={Welcome}/>
@@ -24,9 +22,7 @@ function Quiz() {
       <Route exact path="/quizz/start" component={QuestionContaint}/>
       <Route component={ErrorPage}/>
     </Switch>
-
-      <QuizFooter/>
-    
+    <QuizFooter/>
     </div>
   );
 }
