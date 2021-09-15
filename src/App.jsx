@@ -4,7 +4,7 @@ import Chartjs from "./pages/Chartjs";
 import Map from "./pages/Map"
 import Quiz from "./pages/quiz/Quiz";
 import QuestionContaint from "./pages/quiz/QuestionContaint"
-import './style/general.css';
+import './Style/general.css';
 
 function App() {
   return (
