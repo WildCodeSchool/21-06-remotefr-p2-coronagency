@@ -18,7 +18,7 @@ const Signup = () => {
 
   const handleChange = (event) => {
     setFormAll({ ...formAll, [event.target.name]: event.target.value });
-
+  }
   let config = {
     mode:"cors",
     headers: {
@@ -77,7 +77,7 @@ const Signup = () => {
           <input type="submit" className="submit1" />
         </form>
       </div>
-    // </div>
+   </div>
   );
 };
 
