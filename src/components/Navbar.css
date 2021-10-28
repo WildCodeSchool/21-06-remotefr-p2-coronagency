@@ -90,7 +90,9 @@
         transform: translateY(-100%);
         font-family: var(--second-font);
         align-items: center;
-        padding-left: 15vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: var(--main-color);
     
     }
 
@@ -124,7 +126,9 @@
         transform: translateY(-100%);
         font-family: var(--second-font);
         align-items: center;
-        padding-left: 15vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        background-color: var(--main-color);
     
     }
 

@@ -121,7 +121,7 @@ function QuestionContaint() {
 			{showScore ? (
 				<div className='score-section'>
 					Votre score est de {score} sur {questions.length}
-					<button onClick={refresh} className="again">RECOMMENCER</button>
+					{/* <button onClick={refresh} className="again">RECOMMENCER</button> */}
 				</div>
 			) : (
 				<>
