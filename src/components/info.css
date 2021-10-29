@@ -7,7 +7,7 @@
     text-transform: uppercase;
     flex-direction: row;
     font-size: 1.9em;
-    padding-left: 45px;
+    padding-left: 135px;
 }
 
 .title-container{
@@ -21,8 +21,13 @@
 }
 
 .container-2{
+<<<<<<< HEAD
     margin-left: 20vw;
     margin-right: 13vw;
+=======
+    margin-left: 15vw;
+    margin-right: 15vw;
+>>>>>>> 1a2c797be48b0823bbc873162533d4e806b1a884
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -33,11 +38,16 @@
     font-family: var(--second-font);
     line-height: 45px;
     font-size: 1.3em;
+    text-align: center;
 }
 
 .picture{
     margin-top: 4vh;
+<<<<<<< HEAD
     margin-left: 20vw;
+=======
+    margin-left: 25vw;
+>>>>>>> 1a2c797be48b0823bbc873162533d4e806b1a884
     display: flex;
     flex-direction: row;
     align-content: space-around;
@@ -46,6 +56,7 @@
 .covid{
     height: auto;
     width: auto;
+    
 }
 .covid2{
     height: auto;
