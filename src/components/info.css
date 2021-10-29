@@ -12,7 +12,7 @@
 
 .title-container{
     padding-top: 45px;
-    margin-left: 13vw;
+    margin-left: 20vw;
     margin-right: 15vw;
     margin-bottom: 5vh;
     align-items: center;
@@ -21,7 +21,7 @@
 }
 
 .container-2{
-    margin-left: 15vw;
+    margin-left: 20vw;
     margin-right: 13vw;
     align-items: center;
     display: flex;
@@ -37,7 +37,7 @@
 
 .picture{
     margin-top: 4vh;
-    margin-left: 22vw;
+    margin-left: 20vw;
     display: flex;
     flex-direction: row;
     align-content: space-around;
